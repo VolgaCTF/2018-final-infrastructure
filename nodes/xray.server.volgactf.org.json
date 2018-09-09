@@ -1,0 +1,105 @@
+{
+  "environment": "production",
+  "run_list": [
+    "recipe[locale::default]",
+    "recipe[build-essential::default]",
+    "recipe[ufw::default]",
+    "recipe[ntp::default]",
+    "recipe[poise-python::default]",
+    "recipe[latest-git::default]",
+    "recipe[dotfiles::default]",
+    "recipe[dhparam::default_key]",
+    "recipe[libmaxminddb::default]",
+    "recipe[ngx::default]",
+    "recipe[latest-redis::default]",
+    "recipe[latest-nodejs::default]",
+    "recipe[latest-postgres::default]",
+    "recipe[themis-quals::limits]",
+    "recipe[themis-quals::default]"
+  ],
+  "automatic": {
+    "ipaddress": "xray.server.volgactf.org"
+  },
+  "build-essential": {
+    "compile_time": true
+  },
+  "firewall": {
+    "ufw": {
+      "defaults": {
+        "ipv6": "no",
+        "manage_builtins": "no",
+        "ipt_sysctl": "/etc/ufw/sysctl.conf",
+        "ipt_modules": "nf_conntrack_ftp nf_nat_ftp nf_conntrack_netbios_ns",
+        "policy": {
+          "input": "DROP",
+          "output": "ACCEPT",
+          "forward": "DROP",
+          "application": "SKIP"
+        }
+      }
+    },
+    "rules": [
+      {
+        "http": {
+          "port": 80,
+          "protocol": "tcp",
+          "source": "0.0.0.0/0"
+        }
+      },
+      {
+        "https": {
+          "port": 443,
+          "protocol": "tcp",
+          "source": "0.0.0.0/0"
+        }
+      }
+    ]
+  },
+  "ngx": {
+    "with_geoip2": true
+  },
+  "nginx": {
+    "worker_rlimit_nofile": "100000"
+  },
+  "themis-quals": {
+    "customizers": {
+      "2018-activity-customizer": {
+        "github_repository": "VolgaCTF/2018-activity-customizer",
+        "revision": "master"
+      }
+    },
+    "config": {
+      "customizer": "2018-activity-customizer",
+      "fqdn": "activity.volgactf.ru",
+      "secure": true,
+      "ec_certificates": true,
+      "email": {
+        "transport": "mailgun",
+        "enforce_address_validation": true,
+        "sender_name": "VolgaCTF 2018 Activity",
+        "sender_address": "info@activity.volgactf.ru"
+      },
+      "notifications": {
+        "twitter": false,
+        "telegram": false
+      },
+      "backup": {
+        "enabled": true,
+        "cron": {
+          "minute": "0",
+          "hour": "*/2"
+        }
+      },
+      "cleanup_upload_dir": {
+        "enabled": true,
+        "cron": {
+          "minute": "*/30"
+        }
+      }
+    },
+    "processes": {
+      "app": 4,
+      "queue": 4
+    }
+  }
+}

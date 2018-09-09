@@ -1,0 +1,9 @@
+{
+  "id": "production",
+  "xray.server.volgactf.org": {
+    "encrypted_data": "UtJWtw5hydmYvWC0dVXlN8SFTIQPblDR/52ZA8QMPfGHwp4ooAc8ZOIHym1y\n71G683faQpE0a181+UfZvQ7AviL0+6PduitgJL5tWT/ZrxAS8luNfv79TneB\n2u1hhiGwdVFkdP5Bxj3kQ5dLhX0FnnyRJoVlZiK7jfHIXKzVXRdTWpCUwY46\nNrRWnoR/yhHX\n",
+    "iv": "8pcSqU6msJpjVujd7+jlHw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
