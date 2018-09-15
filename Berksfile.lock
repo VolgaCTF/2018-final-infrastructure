@@ -30,6 +30,10 @@ DEPENDENCIES
   ngx (~> 1.1.1)
   ntp (~> 3.5.2)
   poise-python (~> 1.7.0)
+  themis-finals-live
+    git: https://github.com/themis-project/themis-finals-live-cookbook
+    revision: ff48b63a565a84972ab19ad85f44445c83c125a6
+    tag: v1.2.0
   themis-quals
     git: https://github.com/themis-project/themis-quals-cookbook
     revision: 1d71b0d9441667c34686a830ed6fd690d9aed901
@@ -133,6 +137,9 @@ GRAPH
   ssh_known_hosts (4.0.0)
   supervisor (0.4.12)
     python (>= 0.0.0)
+  themis-finals-live (1.2.0)
+    nginx (>= 0.0.0)
+    tls (~> 3.0.3)
   themis-quals (2.1.0)
     database (~> 6.1.1)
     git (~> 8.0.0)

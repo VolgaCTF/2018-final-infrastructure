@@ -39,3 +39,7 @@ cookbook 'latest-postgres',
 cookbook 'themis-quals',
 		 git: 'https://github.com/themis-project/themis-quals-cookbook',
 		 tag: 'v2.1.0'
+
+cookbook 'themis-finals-live',
+		 git: 'https://github.com/themis-project/themis-finals-live-cookbook',
+		 tag: 'v1.2.0'
