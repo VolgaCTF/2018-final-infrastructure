@@ -1,0 +1,9 @@
+{
+  "id": "production",
+  "master.final.server.volgactf.org": {
+    "encrypted_data": "Gt8/cRWuH0iVF3P7MCjuCnY2m8WDoPYOIMib8BdgYC8z0pT64Q79Sx18BMz0\n97GYPXW/LtS6ftZTu1bgqLPe+Bdkw4cqfbMpdmHo17zBUHU=\n",
+    "iv": "G4aqm9/Lmow1jsg+ZG7Dww==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

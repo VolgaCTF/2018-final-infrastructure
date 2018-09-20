@@ -1,8 +1,14 @@
 {
   "id": "production",
   "xray.server.volgactf.org": {
-    "encrypted_data": "6nSOayL02l7kmwOfOaJdBVBNf1Yb3K2Gwi3zdq+tuekLUUlE73gkh97omNop\nHwW9cQ7pM2UArzciBoS84aLkA7yLvF/vdXI3R99zAAGprcPIRSnZl8JbknGu\n/fiIr3hUi8gb3oIjixf32cwkFkkSWOt3db8SKtdPFzqdtKIwSiOQFFpkvCQp\nVxAB+3UlpSXT+JklvTET7kwChVl9ih36/Jdu7Pap+izonhkEP1rA3eanT6SD\nZ5io7jTSF6cKu5xx\n",
-    "iv": "MOKDcePrOvJpax5Yf67OnA==\n",
+    "encrypted_data": "O+4nrjrZrl7lALWKVrzgCGPR4VPdSHC+DGuI2nwo5KCd0rSwgQhEtGoh5MRa\n4KEp8vp6zgaFdKw/cIqdcbvTYMazq/ciwnGokUE+rCEwUo9oxLcsLBmIM1Cd\nkrzDuZoHwyhecoyf0AcyzZ693pdINpU5lcak6J+9FJwvm95uO6Ns3b1D5hyz\nLLa2yMUJkX+ky3JeGOW8bV+qkQmPgeKQbXHgCel9lw6SmOaKpu5GAPmxMH3N\n+yFRccT0YYIu/5TC\n",
+    "iv": "WOy8TiifAMPiRgZtK+utTw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "master.final.server.volgactf.org": {
+    "encrypted_data": "6MUXBA3c3m3EpHVXFpWAHkGJ7ou95PSE6QQlxDhUVldW6/91AKYFavUFDsqS\n2zJVSBykXbx0Beqv+6YicWbKRPQ5c9Ede/kXGn+osKiT3fMF+0mBAGcNat2h\ndDau7lqjGjf5mAGFGfsJugk1qOX8DgEOlDB3Q4/wmnI3NAGlWOFeq5kg+dDn\nK45U2ZNDV7U3ws7N5KGQ8TsJ/fIczNJauwKbHZeGlcy33uslpKlIERsc9kmT\nFZYUgFqovdhF7tus\n",
+    "iv": "BllANQeNhsfijIyk22YPkw==\n",
     "version": 1,
     "cipher": "aes-256-cbc"
   }

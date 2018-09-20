@@ -1,0 +1,9 @@
+{
+  "id": "production",
+  "docker.volgactf.org": {
+    "encrypted_data": "RnIwhRkk4VduKfFJt39+GgdjWdfXlmGjNnLZ6yupFfx/E4k9/kk3dQUGtm4J\n4qgH6WPyba6hYZxgHho0YbqGYqeRYAAQJ++x7guivvapmBbskbLqHwIZ8vj3\ntt+epDZ2QSFUiAKpZcY+QAqL3/PA+1QQoI/w+XcFmHnp1NHl8hE=\n",
+    "iv": "qtZYZ2ftk+WCNMHnr5UlRA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

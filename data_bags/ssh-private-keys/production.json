@@ -1,0 +1,9 @@
+{
+  "id": "production",
+  "cloud.final.server.volgactf.org": {
+    "encrypted_data": "jp3M/afOCxJ/ZsWENgaZIgiqC9hWsknTAOzLIABRA8LUkfHtm+7DxzugB4fz\nfBsrNGhEefN+Bi594Jp58Jeq4Ssg/1DrVCgRwOv29ZEjoHwIMEqmcjqrbKAl\nLeCqUZxNyPettSC3q9fSwadpYulqJsEt3gYuunbVFMQAKypzQEd7qW+9Ql5y\njbLg7SaPGUn7ptFVe7zvXVbv5tgWX12LXcWnxJrtSsKki4ovewrmsezJpzz2\nXYBh7eC8aZqE3ufDYnnH6L4AA6ZnL3DVfxz5tp1uWA9ihyJP8qwa1AE8iZfD\nJ554iGRnM12zRJGKS/6ZuA06XiH1qBiB8a63/26F1bR8RqdXsHhlvJLGAJkb\nNjIEn3yuN9QZS1iJY2y94Cug3TzKXfhkaAaqdtpFcS8bubecYW3c3miWIdEq\nWaico5LqchuRRhuqFqPLgwq9u69jZLsPc5H3onK/tkIOsZ+KvVUIT+v6BRRp\nIehtpbu9XZGjofSaWgzc0KXqLDbEJmGqhJ1oNtUKXrBS5Fi4TQTa24nTvc0t\nkJX3+K7UbbEa/Wpp9YbAbr5jVBsRar0chl/G8UhyOvTfUFg6PtVf64LGhQ57\nbLEJyqIcz1t2yUAV5qlrcf6RWFZJ8V4Wfup3Crog5ny6tw7X0RBZXVsylMYf\ndcJEXv4xlFDWCkRsYaMRrOo=\n",
+    "iv": "5gf8jEkJ8V23dwTSnP6JMA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

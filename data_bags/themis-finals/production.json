@@ -1,0 +1,21 @@
+{
+  "id": "production",
+  "auth": {
+    "encrypted_data": "jD7pVfhN1HJJ54xP/Ov+XeJ9X6IzsBaOvWsk8KoJHMWyFQcbehB3xofqwNWX\n75RKn1PqnT1m4fYoFnmq2kiavkk54B/OvTwPILNOBqtnPNlVPt7eAMQ4rnTv\n/f6IZu6R4e4L0F93GAPLrOTXHNvry1+BpG/eTB2ZyH5G1EMCRrme7/ykgEwX\n/Q7ty6FUxbx3uK2LMjw+Z6KnZ/o99te1FEuvVFyOM2GMJcDtH6suzOeeESIH\neXi4yNiWWUG4kXEh\n",
+    "iv": "ErVOF2DuOqMwPKsxqZsHUA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "flag_generator_secret": {
+    "encrypted_data": "q42J48WrT5bV4bT1KYp5kbX39vs6D00atXjxttEQaqXohS3wJyvG3W2OmKoO\nnUpMt2Vb87AdzamlCndbf8VxyQ==\n",
+    "iv": "PudHNUBt/SG5wHaZesvDQw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "sign_key": {
+    "encrypted_data": "PMIb0sS+oDZPqR4Vw0dwFDUx2dVlnUSn4erSrZcuvTVFP2LMnGHX7iIKUsf3\n1q3OaHjMlp1+OqryIcw0cA4wwuc7SjigtgwlWwOZM/QE99V3lwhD/jzERa8w\nhjctADE11VGgSNdLerKGveH+ISgtAmr32+18w1ubuPHGphFLAhgfcwup5OiX\nzVpelndUUTg+2xvpzfDOm+1w7wr+gfffMj3ftoTObR0ivlnqCTowsZv2vXNZ\noCf1bMq1u60P+CElON0EUmOxVTrnZmcra5LQJzn5OSKpzVWBd1TPaX/XTgVK\nzIN208L0Uqn2HtPb2PLTlMU8mTP7G2I8IE13fFkJXUD3uxnKaCQ7Ou37LVdQ\nVs07cIxvntWJcjj1bMAeuvax3tnn9ncxxRgyym5TZYkk3PEZSz98HWmImvar\n19lo9sHZBElNHjIKVXmc2KZVNZ4Zj2fO1x1YhP2HD9NE3al5OBupBlhdNm9j\nBNhCaXCvFhu2V+lYl7zEIawECjvbvkBK0PtSXm6wuowSBOznaPDQDtq3ZrW0\nPTdUMVlZOSx2+tBSMNlK30zKjsJ4hJPTMddxkqzhKXcNPKvuHeiMywfSvsng\n5+GTKXaXlpp0WQV9pcY=\n",
+    "iv": "trCOMwrq/x8vYllSL0t9xA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

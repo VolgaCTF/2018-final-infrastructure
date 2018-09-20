@@ -1,0 +1,61 @@
+{
+  "environment": "production",
+  "run_list": [
+    "role[base]",
+    "recipe[ngx::default]",
+    "recipe[themis-finals-checker::default]"
+  ],
+  "automatic": {
+    "fqdn": "checker1.final.server.volgactf.org"
+  },
+  "firewall": {
+    "rules": [
+      {
+        "http": {
+          "port": 80,
+          "protocol": "tcp",
+          "source": "172.16.0.0/24"
+        },
+        "dnsmasq_tcp": {
+          "port": 53,
+          "protocol": "tcp",
+          "source": "192.168.163.0/24"
+        },
+        "dnsmasq_udp": {
+          "port": 53,
+          "protocol": "udp",
+          "source": "192.168.163.0/24"
+        }
+      }
+    ]
+  },
+  "localdns": {
+    "listen_address": "0.0.0.0"
+  },
+  "ngx": {
+    "install": "mainline",
+    "with_openssl": false,
+    "with_http2": false,
+    "with_ipv6": false,
+    "with_ct": false,
+    "with_status": true
+  },
+  "secret": {
+    "prefix_fqdn": false
+  },
+  "themis-finals-checker": {
+    "service_alias": "jocr",
+    "network": {
+      "name": "themis-finals-devenv-checker"
+    },
+    "image": {
+      "name": "jocr-checker",
+      "registry": "docker.volgactf.org",
+      "repo": "jocr-checker",
+      "tag": "8"
+    },
+    "deployment": {
+      "instances": 8
+    }
+  }
+}

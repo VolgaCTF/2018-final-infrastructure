@@ -63,8 +63,51 @@
       }
     ]
   },
+  "latest-redis": {
+    "listen": {
+      "address": "127.0.0.1",
+      "port": 6379
+    }
+  },
+  "latest-postgres": {
+    "listen": {
+      "address": "127.0.0.1",
+      "port": 5432
+    },
+    "pg_hba": [
+      {
+        "type": "host",
+        "db": "all",
+        "user": "all",
+        "addr": "127.0.0.1/24",
+        "method": "md5"
+      }
+    ]
+  },
+  "latest-nodejs": {
+    "lts": {
+      "version": "8.9.1",
+      "binary": {
+        "checksum": {
+          "linux_x64": "0e49da19cdf4c89b52656e858346775af21f1953c308efbc803b665d6069c15c"
+        }
+      }
+    },
+    "current": {
+      "version": "9.1.0",
+      "binary": {
+        "checksum": {
+          "linux_x64": "5a05b32e677c6d5c2e85df30663aa1898aa8fe45ac6b797554069c97b9a5d228"
+        }
+      }
+    }
+  },
   "ngx": {
-    "with_geoip2": true
+    "install": "mainline",
+    "ssl_configuration": "intermediate",
+    "with_geoip2": true,
+    "with_realip": true,
+    "with_status": true
   },
   "nginx": {
     "worker_rlimit_nofile": "100000"
@@ -114,7 +157,7 @@
     "hosts": [
       {
         "fqdn": "live.volgactf.ru",
-        "ip_addr": "10.71.0.201",
+        "ip_addr": "172.16.0.2",
         "secure": true,
         "ec_certificates": true
       }

@@ -2,44 +2,101 @@ source 'https://api.berkshelf.com'
 
 solver :gecode, :preferred
 
+cookbook 'apt'
 cookbook 'build-essential'
-cookbook 'ntp', '~> 3.5.2'
+cookbook 'git', '~> 9.0.0'
+cookbook 'ntp'
+cookbook 'ufw', '~> 3.1.1'
 cookbook 'poise-python', '~> 1.7.0'
 cookbook 'locale', '~> 2.0.1'
-cookbook 'dhparam', '~> 1.0.0'
-cookbook 'ufw', '~> 3.1.0'
-
-cookbook 'libmaxminddb', '~> 1.0.0'
+cookbook 'supervisor', '~> 0.4.12'
+cookbook 'yarn', '~> 0.4.2'
+cookbook 'ssh_known_hosts', '~> 6.1.0'
+cookbook 'htpasswd', '~> 0.3.0'
 cookbook 'ngx', '~> 1.1.1'
+cookbook 'dhparam', '~> 1.0.0'
+cookbook 'libmaxminddb', '~> 1.0.1'
 
 cookbook 'dotfiles',
-		 git: 'https://github.com/aspyatkin/dotfiles-cookbook',
-		 tag: 'v1.4.0'
+		   git: 'https://github.com/aspyatkin/dotfiles-cookbook',
+		   tag: 'v1.4.0'
 
 cookbook 'latest-git',
-		 git: 'https://github.com/aspyatkin/latest-git-cookbook',
-		 tag: 'v1.4.0'
+		   git: 'https://github.com/aspyatkin/latest-git-cookbook',
+		   tag: 'v1.5.0'
 
 cookbook 'latest-nodejs',
-		 git: 'https://github.com/aspyatkin/latest-nodejs-cookbook',
-		 tag: 'v1.5.0'
+		   git: 'https://github.com/aspyatkin/latest-nodejs-cookbook',
+		   tag: 'v1.6.0'
 
 cookbook 'latest-redis',
-		 git: 'https://github.com/aspyatkin/latest-redis-cookbook',
-		 tag: 'v1.2.1'
+         # path: '~/Projects/github.com/aspyatkin/latest-redis-cookbook'
+		   git: 'https://github.com/aspyatkin/latest-redis-cookbook',
+		   tag: 'v1.3.2'
 
 cookbook 'git2',
-		 git: 'https://github.com/aspyatkin/git2-cookbook',
-		 tag: 'v1.0.0'
+		   git: 'https://github.com/aspyatkin/git2-cookbook',
+		   tag: 'v1.0.0'
 
 cookbook 'latest-postgres',
-		 git: 'https://github.com/aspyatkin/latest-postgres-cookbook',
-		 tag: 'v0.2.0'
+         # path: '~/Projects/github.com/aspyatkin/latest-postgres-cookbook'
+		   git: 'https://github.com/aspyatkin/latest-postgres-cookbook',
+		   tag: 'v0.3.1'
 
 cookbook 'themis-quals',
-		 git: 'https://github.com/themis-project/themis-quals-cookbook',
-		 tag: 'v2.1.0'
+		   # path: '~/Projects/github.com/themis-project/themis-quals-cookbook'
+		   git: 'https://github.com/themis-project/themis-quals-cookbook',
+		   tag: 'v2.1.1'
 
 cookbook 'themis-finals-live',
-		 git: 'https://github.com/themis-project/themis-finals-live-cookbook',
-		 tag: 'v1.2.0'
+		   git: 'https://github.com/themis-project/themis-finals-live-cookbook',
+		   tag: 'v1.2.0'
+
+cookbook 'localdns',
+         git: 'https://github.com/aspyatkin/localdns-cookbook',
+         tag: 'v1.3.1'
+
+cookbook 'themis-finals-utils',
+         # path: '~/Projects/github.com/themis-project/themis-finals-utils-cookbook'
+         git: 'https://github.com/themis-project/themis-finals-utils-cookbook',
+         tag: 'v1.2.0'
+
+cookbook 'themis-finals',
+         # path: '~/Projects/github.com/themis-project/themis-finals-cookbook'
+         git: 'https://github.com/themis-project/themis-finals-cookbook',
+         tag: 'v2.2.1'
+
+cookbook 'themis-finals-lib-attack-result-rb',
+         # path: '~/Projects/github.com/themis-project/themis-finals-lib-attack-result-rb-cookbook'
+         git: 'https://github.com/themis-project/themis-finals-lib-attack-result-rb-cookbook',
+         tag: 'v1.3.0'
+
+cookbook 'themis-finals-lib-checker-result-rb',
+         # path: '~/Projects/github.com/themis-project/themis-finals-lib-checker-result-rb-cookbook'
+         git: 'https://github.com/themis-project/themis-finals-lib-checker-result-rb-cookbook',
+         tag: 'v1.3.0'
+
+cookbook 'themis-finals-py-lib',
+         # path: '~/Projects/github.com/themis-project/themis-finals-py-lib-cookbook'
+         git: 'https://github.com/themis-project/themis-finals-py-lib-cookbook',
+         tag: 'v1.0.0'
+
+cookbook 'themis-finals-customize-default',
+         # path: '~/Projects/github.com/themis-project/themis-finals-customize-default-cookbook'
+         git: 'https://github.com/themis-project/themis-finals-customize-default-cookbook',
+         tag: 'v1.0.1'
+
+cookbook 'themis-finals-checker',
+         # path: '~/Projects/github.com/themis-project/themis-finals-checker-cookbook'
+         git: 'https://github.com/themis-project/themis-finals-checker-cookbook',
+         tag: 'v1.0.0'
+
+cookbook 'volgactf-2018-final-customizer',
+         # path: '~/Projects/github.com/VolgaCTF/2018-final-customizer-cookbook'
+         git: 'https://github.com/VolgaCTF/2018-final-customizer-cookbook',
+         tag: 'v1.0.1'
+
+cookbook 'volgactf-2018-final-cloud',
+         # path: '~/Projects/github.com/VolgaCTF/2018-final-cloud-cookbook'
+         git: 'https://github.com/VolgaCTF/2018-final-cloud-cookbook',
+         tag: 'v1.0.0'

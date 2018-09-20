@@ -11,6 +11,97 @@
       "install": "current",
       "binary": true
     },
+    "latest-postgres": {
+      "listen": {
+        "address": "172.16.0.3",
+        "port": 5432
+      },
+      "pg_hba": [
+        {
+          "type": "host",
+          "db": "all",
+          "user": "all",
+          "addr": "172.16.0.0/24",
+          "method": "md5"
+        }
+      ]
+    },
+    "latest-redis": {
+      "listen": {
+        "address": "172.16.0.4",
+        "port": 6379
+      }
+    },
+    "localdns": {
+      "records": [
+        {
+          "type": "A",
+          "name": "redis.final.volgactf",
+          "ipv4_address": "172.16.0.4"
+        },
+        {
+          "type": "SRV",
+          "service": "redis",
+          "protocol": "tcp",
+          "domain": "final.volgactf",
+          "target": "redis.final.volgactf",
+          "port": 6379
+        },
+        {
+          "type": "A",
+          "name": "postgres.final.volgactf",
+          "ipv4_address": "172.16.0.3"
+        },
+        {
+          "type": "SRV",
+          "service": "postgres",
+          "protocol": "tcp",
+          "domain": "final.volgactf",
+          "target": "postgres.final.volgactf",
+          "port": 5432
+        },
+        {
+          "type": "A",
+          "name": "master.final.volgactf",
+          "ipv4_address": "172.16.0.2"
+        },
+        {
+          "type": "A",
+          "name": "checker1.final.volgactf",
+          "ipv4_address": "172.16.0.11"
+        },
+        {
+          "type": "A",
+          "name": "checker2.final.volgactf",
+          "ipv4_address": "172.16.0.12"
+        },
+        {
+          "type": "A",
+          "name": "checker3.final.volgactf",
+          "ipv4_address": "172.16.0.13"
+        },
+        {
+          "type": "A",
+          "name": "checker4.final.volgactf",
+          "ipv4_address": "172.16.0.14"
+        },
+        {
+          "type": "A",
+          "name": "checker5.final.volgactf",
+          "ipv4_address": "172.16.0.15"
+        },
+        {
+          "type": "A",
+          "name": "checker6.final.volgactf",
+          "ipv4_address": "172.16.0.16"
+        },
+        {
+          "type": "A",
+          "name": "cloud.final.volgactf",
+          "ipv4_address": "172.16.0.21"
+        }
+      ]
+    },
     "ntp": {
       "servers": [
         "0.pool.ntp.org",
@@ -19,11 +110,171 @@
         "3.pool.ntp.org"
       ]
     },
-    "ngx": {
-      "install": "mainline",
-      "ssl_configuration": "intermediate",
-      "with_status": true,
-      "with_realip": true
+    "themis": {
+      "finals": {
+        "ns": "final.volgactf"
+      }
+    },
+    "themis-finals": {
+      "customize_cookbook": "volgactf-2018-final-customizer",
+      "frontend_customize_module": "frontend/customize.js",
+      "frontend_extra_files": {
+        "frontend/volgactf-logo.svg": "src/images/volgactf-logo.svg",
+        "frontend/volgactf-notify-logo.png": "src/images/volgactf-notify-logo.png"
+      },
+      "team_logo_files": {
+      },
+      "supervisor_namespace": "volgactf.final",
+      "flag_wrap": {
+        "prefix": "VolgaCTF{",
+        "suffix": "}"
+      },
+      "config": {
+        "internal_networks": [
+          "172.16.0.0/24",
+          "10.73.73.0/24"
+        ],
+        "api_req_limits": {
+          "flag_info": {
+            "rate": "10r/s",
+            "burst": 5,
+            "nodelay": true
+          },
+          "flag_submit": {
+            "rate": "5r/s",
+            "burst": 5,
+            "nodelay": true
+          }
+        },
+        "competition": {
+          "title": "VolgaCTF 2018 Final"
+        },
+        "settings": {
+          "flag_lifetime": 360,
+          "round_timespan": 120,
+          "poll_timespan": 35,
+          "poll_delay": 40
+        },
+        "deprecated_settings": {
+          "attack_limit": {
+            "attempts": 200,
+            "time": 60
+          }
+        },
+        "teams": {
+          "team1": {
+            "name": "BIZone",
+            "network": "172.29.1.0/24"
+          },
+          "team2": {
+            "name": "KXTI",
+            "network": "172.29.2.0/24"
+          },
+          "team3": {
+            "name": "Kamneezhka",
+            "network": "172.29.3.0/24"
+          },
+          "team4": {
+            "name": "cyber3y6p",
+            "network": "172.29.4.0/24"
+          },
+          "team5": {
+            "name": "ISITDTU",
+            "network": "172.29.5.0/24"
+          },
+          "team6": {
+            "name": "BambooFox",
+            "network": "172.29.6.0/24"
+          },
+          "team7": {
+            "name": "Cerberus",
+            "network": "172.29.7.0/24"
+          },
+          "team8": {
+            "name": "WeAreScientists",
+            "network": "172.29.8.0/24"
+          },
+          "team9": {
+            "name": "Corrupted Reflection",
+            "network": "172.29.9.0/24"
+          },
+          "team10": {
+            "name": "Lights Out",
+            "network": "172.29.10.0/24"
+          },
+          "team11": {
+            "name": "SUSlo.PAS",
+            "network": "172.29.11.0/24"
+          },
+          "team12": {
+            "name": "JustDoIt",
+            "network": "172.29.12.0/24"
+          },
+          "team13": {
+            "name": "ThunderClap",
+            "network": "172.29.13.0/24"
+          },
+          "team14": {
+            "name": "Bushwhackers",
+            "network": "172.29.14.0/24"
+          },
+          "team15": {
+            "name": "Magic-Hat",
+            "network": "172.29.15.0/24"
+          },
+          "team16": {
+            "name": "Gast1",
+            "network": "172.29.16.0/24",
+            "guest": true
+          },
+          "team17": {
+            "name": "Gast2",
+            "network": "172.29.17.0/24",
+            "guest": true
+          }
+        },
+        "domain_files": [
+          {
+            "name": "init-10",
+            "type": "competition_init",
+            "services": {
+              "jocr": {
+                "name": "JOCR",
+                "hostmask": "0.0.0.3",
+                "checker_endpoint": "http://checker1.final.volgactf",
+                "attack_priority": true
+              },
+              "marketplace": {
+                "name": "MarketPlace",
+                "hostmask": "0.0.0.3",
+                "checker_endpoint": "http://checker2.final.volgactf",
+                "attack_priority": true
+              },
+              "smartoracle": {
+                "name": "SmartOracle",
+                "hostmask": "0.0.0.3",
+                "checker_endpoint": "http://checker3.final.volgactf",
+                "attack_priority": true
+              },
+              "polysemy": {
+                "name": "Polysemy",
+                "hostmask": "0.0.0.3",
+                "checker_endpoint": "http://checker4.final.volgactf",
+                "attack_priority": true
+              },
+              "hospital": {
+                "name": "Hospital",
+                "hostmask": "0.0.0.3",
+                "checker_endpoint": "http://checker5.final.volgactf",
+                "attack_priority": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    "htpasswd": {
+      "install_method": "ruby"
     }
   }
 }

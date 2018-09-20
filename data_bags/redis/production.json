@@ -1,0 +1,15 @@
+{
+  "id": "production",
+  "redis.final.server.volgactf.org": {
+    "encrypted_data": "GOomo8MJiKHsp/YjsP42g9qtUJeJGITHtW2jYhwnU/E8fxSX6vtrjtHU7avw\nHxhGRGlsh0zAxreIRQByuGouwKq/bXfeWIpMDFXW6zP0Znw=\n",
+    "iv": "U1piCSdhcuT56CAh8W3i6w==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "master.final.server.volgactf.org": {
+    "encrypted_data": "FgRDleRJTuTAzy+X2aVt5XFmmEz/IgqJHFCaMxxOupSbnQy3TFGyJ/zEsDWE\n3IRynZTjymEbNe9uLdQRUBZ+DcO3l9Gnr4Pc+NvfWXKr2XA=\n",
+    "iv": "thADK6vXqT5QdHuMxCqLmA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

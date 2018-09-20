@@ -1,8 +1,26 @@
 {
   "id": "production",
   "xray.server.volgactf.org": {
-    "encrypted_data": "UtJWtw5hydmYvWC0dVXlN8SFTIQPblDR/52ZA8QMPfGHwp4ooAc8ZOIHym1y\n71G683faQpE0a181+UfZvQ7AviL0+6PduitgJL5tWT/ZrxAS8luNfv79TneB\n2u1hhiGwdVFkdP5Bxj3kQ5dLhX0FnnyRJoVlZiK7jfHIXKzVXRdTWpCUwY46\nNrRWnoR/yhHX\n",
-    "iv": "8pcSqU6msJpjVujd7+jlHw==\n",
+    "encrypted_data": "pF2a2NRTN/K8xf28GC2gSPoJxyBavfp/f09hF61tNP2Pi6ww8jiJwHjZ3Xq4\n1pUNthN2Wdmif+EwUDkSzBW/iKZQPI+YzyHlQxTa/o+1SazGGpPxXx90lfaS\nqygQiKG7ymeXiTnWFG1E+Snz3rL4Y96mk1qEX59COmDnSt0GiiCdone2DApO\nrczLxtm+IY+A\n",
+    "iv": "32O7ivdsvYzz3pjWzfq4dw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "postgres.final.server.volgactf.org": {
+    "encrypted_data": "Z1jH7hTIHnHEQ+WXi+t2LRnIEGaKxlbZCw4jloAH0M4/LFZ4O3GlHIuTAQhL\nGN0jeq0gIiJ1acDFEcRkP72Dqxcs5fow0vPklmV3vbzvm3MU9rdUxRSq7G0z\ne234wYDUHjDihWiiPQBDsMuIBp2B3AGHT7LmnfsEc7vOK0EXnXBKDkRP2zpo\nrVV/0Z7BfOEy\n",
+    "iv": "e/3KmdSrGo7dYpkggB4SMg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "master.final.server.volgactf.org": {
+    "encrypted_data": "hF8FF1ljlTmn18vx5xuu7LTSx7+Hd2+LKdH2lTYQBP6wgakMOUgmx7ZkH7Ek\nQXVL9W2USWhvNmDsrT2w6O/WIa1JSW+z4zc7cqbMY3Kxsocc1p2qwpcZ5ERo\nbTTVkG2fI9ISqqTl1+PTF3qLpczs+lVAICI/rTOdG1NJZA7U+Me5v84wlIAq\nz57t7oQpeHct\n",
+    "iv": "iwtIaxs4z6VYlY8t5K/MVg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "cloud.final.server.volgactf.org": {
+    "encrypted_data": "orCCdyhd6MnbeuhLPCEciGIAYSxd2x6sOWbB0LQFMS6HsqO449Z3ywxtJmOy\nDc8HaoIOuFzIPBL6kp8zmvmaeWUl+CKQpavpFRQPbCGP/9Iwkv8lnWhTf5IU\n+4wZUWE49iVyoSIKZB9TBRV8wVY1qg==\n",
+    "iv": "aU/+oDyLaVw3FCwx2aV5qQ==\n",
     "version": 1,
     "cipher": "aes-256-cbc"
   }

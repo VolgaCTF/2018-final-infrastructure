@@ -1,44 +1,90 @@
 DEPENDENCIES
+  apt
   build-essential
   dhparam (~> 1.0.0)
   dotfiles
     git: https://github.com/aspyatkin/dotfiles-cookbook
     revision: 5a1675c593b603fd4c0e6ce6b7ddd0076c662fe9
     tag: v1.4.0
+  git (~> 9.0.0)
   git2
     git: https://github.com/aspyatkin/git2-cookbook
     revision: 33e0d02179735822efe7b74f11e6274641644036
     tag: v1.0.0
+  htpasswd (~> 0.3.0)
   latest-git
     git: https://github.com/aspyatkin/latest-git-cookbook
-    revision: cc1b997196c25a34d7df6f43853099d0878a5d7f
-    tag: v1.4.0
+    revision: f4f2273e5f93ca6eabc2a6231b0ccafe0c58240e
+    tag: v1.5.0
   latest-nodejs
     git: https://github.com/aspyatkin/latest-nodejs-cookbook
-    revision: 1f6c668d275d347846606bc5011d71375962a5c3
-    tag: v1.5.0
+    revision: b29f87aa451d21aec1ddd899dd006fe6c9dff30b
+    tag: v1.6.0
   latest-postgres
     git: https://github.com/aspyatkin/latest-postgres-cookbook
-    revision: 9a44beb09eaf051944f5d1550d46da85cec4dc61
-    tag: v0.2.0
+    revision: 7becabd62374421e07bff95f05f1db1f31aef617
+    tag: v0.3.1
   latest-redis
     git: https://github.com/aspyatkin/latest-redis-cookbook
-    revision: a474bcea8bc662288cfccea07914740ff010ce03
-    tag: v1.2.1
-  libmaxminddb (~> 1.0.0)
+    revision: 65e9dd2ceb5e7626ee1c490af8f75b7423713328
+    tag: v1.3.2
+  libmaxminddb (~> 1.0.1)
+  localdns
+    git: https://github.com/aspyatkin/localdns-cookbook
+    revision: 26af85e3d8117375dd56b7ef1bdc92b5974cb5ff
+    tag: v1.3.1
   locale (~> 2.0.1)
   ngx (~> 1.1.1)
-  ntp (~> 3.5.2)
+  ntp
   poise-python (~> 1.7.0)
+  ssh_known_hosts (~> 6.1.0)
+  supervisor (~> 0.4.12)
+  themis-finals
+    git: https://github.com/themis-project/themis-finals-cookbook
+    revision: 722fbbf456ab078b29c5bb03fa119ee7894a5d5b
+    tag: v2.2.1
+  themis-finals-checker
+    git: https://github.com/themis-project/themis-finals-checker-cookbook
+    revision: fc8853920dc82d28907e34408a25a36105f79278
+    tag: v1.0.0
+  themis-finals-customize-default
+    git: https://github.com/themis-project/themis-finals-customize-default-cookbook
+    revision: e7d7d99f75b9cf8235bf661706dcd65972f770d0
+    tag: v1.0.1
+  themis-finals-lib-attack-result-rb
+    git: https://github.com/themis-project/themis-finals-lib-attack-result-rb-cookbook
+    revision: 21c6da84a5e791af73cf828c1433f44c2658f09c
+    tag: v1.3.0
+  themis-finals-lib-checker-result-rb
+    git: https://github.com/themis-project/themis-finals-lib-checker-result-rb-cookbook
+    revision: 642470e2ed2841d1f50cf64bf5338d2c755c830f
+    tag: v1.3.0
   themis-finals-live
     git: https://github.com/themis-project/themis-finals-live-cookbook
     revision: ff48b63a565a84972ab19ad85f44445c83c125a6
     tag: v1.2.0
+  themis-finals-py-lib
+    git: https://github.com/themis-project/themis-finals-py-lib-cookbook
+    revision: 66b6409f0935d91772022d8e7942486c17f275b5
+    tag: v1.0.0
+  themis-finals-utils
+    git: https://github.com/themis-project/themis-finals-utils-cookbook
+    revision: 0776b5d59cee1d45e891ab48044791a5c6d433c4
+    tag: v1.2.0
   themis-quals
     git: https://github.com/themis-project/themis-quals-cookbook
-    revision: 1d71b0d9441667c34686a830ed6fd690d9aed901
-    tag: v2.1.0
-  ufw (~> 3.1.0)
+    revision: d6caa85e3d305e742c7bbece1077315df6f427f6
+    tag: v2.1.1
+  ufw (~> 3.1.1)
+  volgactf-2018-final-cloud
+    git: https://github.com/VolgaCTF/2018-final-cloud-cookbook
+    revision: a577a0179d9bc7f7b948e4b1bf6a955195b6b4f7
+    tag: v1.0.0
+  volgactf-2018-final-customizer
+    git: https://github.com/VolgaCTF/2018-final-customizer-cookbook
+    revision: a7108eae1f6b5a474b2e1c7f46ed26ca9c883d9d
+    tag: v1.0.1
+  yarn (~> 0.4.2)
 
 GRAPH
   apt (6.1.4)
@@ -53,33 +99,35 @@ GRAPH
   database (6.1.1)
     postgresql (>= 1.0.0)
   dhparam (1.0.0)
+  docker (4.6.5)
   dotfiles (1.4.0)
     vim (~> 2.0.2)
     zsh (~> 2.0.0)
   firewall (2.6.5)
     chef-sugar (>= 0.0.0)
-  git (8.0.1)
-    build-essential (>= 0.0.0)
-    homebrew (>= 0.0.0)
+  git (9.0.1)
+    build-essential (>= 5.0.0)
   git2 (1.0.0)
   graphicsmagick (0.1.0)
-  homebrew (5.0.5)
   htpasswd (0.3.0)
     poise-python (>= 0.0.0)
   instance (2.0.0)
-  latest-git (1.4.0)
+  latest-git (1.5.0)
     apt (>= 0.0.0)
-    git (~> 8.0.0)
-  latest-nodejs (1.5.0)
-    nodejs (~> 4.0.0)
-  latest-postgres (0.2.0)
+    git (>= 0.0.0)
+  latest-nodejs (1.6.0)
+    nodejs (~> 5.0.0)
+  latest-postgres (0.3.1)
     instance (~> 2.0.0)
     postgresql (~> 6.1.1)
     secret (~> 1.0.0)
-  latest-redis (1.2.1)
-    redisio (~> 2.6.1)
-  libmaxminddb (1.0.0)
+  latest-redis (1.3.2)
+    redisio (~> 2.7.1)
+    secret (~> 1.0.0)
+  libmaxminddb (1.0.1)
     apt (>= 0.0.0)
+  localdns (1.3.1)
+    patch (~> 2.2.1)
   locale (2.0.1)
   logrotate (2.2.0)
   mingw (2.1.0)
@@ -100,11 +148,10 @@ GRAPH
     libmaxminddb (~> 1.0.0)
     logrotate (~> 2.2.0)
     nginx (>= 8.1.5)
-  nodejs (4.0.0)
+  nodejs (5.0.0)
     ark (>= 2.0.2)
     build-essential (>= 0.0.0)
-    compat_resource (>= 12.16)
-  ntp (3.5.6)
+  ntp (3.6.0)
   ohai (5.2.5)
   openssl (8.5.5)
   patch (2.2.1)
@@ -124,7 +171,12 @@ GRAPH
   python (1.4.6)
     build-essential (>= 0.0.0)
     yum-epel (>= 0.0.0)
-  redisio (2.6.1)
+  rbenv (1.7.1)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    git (>= 0.0.0)
+    ohai (>= 1.1)
+  redisio (2.7.1)
     build-essential (>= 0.0.0)
     selinux_policy (>= 0.0.0)
     ulimit (>= 0.1.2)
@@ -134,29 +186,81 @@ GRAPH
   seven_zip (3.0.0)
     windows (>= 0.0.0)
   ssh-private-keys (2.0.0)
-  ssh_known_hosts (4.0.0)
+  ssh_known_hosts (6.1.3)
   supervisor (0.4.12)
     python (>= 0.0.0)
+  sysctl (1.0.5)
+    ohai (>= 5.0)
+  themis-finals (2.2.1)
+    database (~> 6.1.1)
+    git (>= 0.0.0)
+    git2 (~> 1.0.0)
+    graphicsmagick (~> 0.1.0)
+    htpasswd (~> 0.3.0)
+    instance (~> 2.0.0)
+    localdns (~> 1.3.0)
+    netdata (~> 0.4.1)
+    nginx (>= 0.0.0)
+    patch (~> 2.2.1)
+    poise-python (>= 1.6.0)
+    rbenv (= 1.7.1)
+    secret (~> 1.0.0)
+    ssh-private-keys (~> 2.0.0)
+    ssh_known_hosts (>= 0.0.0)
+    supervisor (~> 0.4.12)
+    themis-finals-customize-default (~> 1.0.0)
+    themis-finals-utils (~> 1.2.0)
+    volgactf-2018-final-customizer (~> 1.0.0)
+    yarn (~> 0.4.0)
+  themis-finals-checker (1.0.0)
+    docker (~> 4.6.5)
+    instance (~> 2.0.0)
+    localdns (~> 1.3.1)
+    nginx (>= 0.0.0)
+    secret (~> 1.0.0)
+  themis-finals-customize-default (1.0.1)
+  themis-finals-lib-attack-result-rb (1.3.0)
+    git (>= 0.0.0)
+    git2 (~> 1.0.0)
+    instance (~> 2.0.0)
+    ssh-private-keys (~> 2.0.0)
+    ssh_known_hosts (>= 0.0.0)
+  themis-finals-lib-checker-result-rb (1.3.0)
+    git (>= 0.0.0)
+    git2 (~> 1.0.0)
+    instance (~> 2.0.0)
+    ssh-private-keys (~> 2.0.0)
+    ssh_known_hosts (>= 0.0.0)
   themis-finals-live (1.2.0)
     nginx (>= 0.0.0)
     tls (~> 3.0.3)
-  themis-quals (2.1.0)
+  themis-finals-py-lib (1.0.0)
+    git (>= 0.0.0)
+    git2 (~> 1.0.0)
+    instance (~> 2.0.0)
+    ssh-private-keys (~> 2.0.0)
+    ssh_known_hosts (>= 0.0.0)
+  themis-finals-utils (1.2.0)
+    instance (~> 2.0.0)
+    rbenv (= 1.7.1)
+    sysctl (~> 1.0.4)
+  themis-quals (2.1.1)
     database (~> 6.1.1)
-    git (~> 8.0.0)
+    git (>= 0.0.0)
     git2 (~> 1.0.0)
     graphicsmagick (~> 0.1.0)
     htpasswd (~> 0.3.0)
     instance (~> 2.0.0)
     logrotate (~> 2.2.0)
     netdata (~> 0.4.0)
-    nginx (~> 8.1.0)
-    nodejs (~> 4.0.0)
+    nginx (>= 0.0.0)
+    nodejs (>= 0.0.0)
     patch (~> 2.2.1)
     poise-python (~> 1.7.0)
     postgresql (~> 6.1.1)
     secret (~> 1.0.0)
     ssh-private-keys (~> 2.0.0)
-    ssh_known_hosts (~> 4.0.0)
+    ssh_known_hosts (>= 0.0.0)
     supervisor (~> 0.4.12)
     tls (~> 3.0.3)
   tls (3.0.3)
@@ -164,7 +268,22 @@ GRAPH
     firewall (>= 2.0)
   ulimit (1.0.0)
   vim (2.0.2)
+  volgactf-2018-final-cloud (1.0.0)
+    database (~> 6.1.1)
+    git (>= 0.0.0)
+    git2 (~> 1.0.0)
+    instance (~> 2.0.0)
+    nginx (>= 0.0.0)
+    poise-python (~> 1.7.0)
+    postgresql (~> 6.1.1)
+    secret (~> 1.0.0)
+    ssh-private-keys (~> 2.0.0)
+    ssh_known_hosts (>= 0.0.0)
+    supervisor (~> 0.4.12)
+  volgactf-2018-final-customizer (1.0.1)
   windows (5.1.1)
+  yarn (0.4.2)
+    apt (>= 0.0.0)
   yum-epel (2.1.2)
     compat_resource (>= 12.16.3)
   zsh (2.0.0)

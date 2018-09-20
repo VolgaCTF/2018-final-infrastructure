@@ -1,0 +1,56 @@
+{
+  "environment": "production",
+  "run_list": [
+    "role[base]",
+    "recipe[latest-postgres::default]",
+    "recipe[supervisor::default]",
+    "recipe[volgactf-2018-final-cloud::default]"
+  ],
+  "automatic": {
+    "fqdn": "cloud.final.server.volgactf.org"
+  },
+  "firewall": {
+    "rules": [
+      {
+        "cloud": {
+          "port": 7778,
+          "protocol": "tcp",
+          "source": "0.0.0.0/0"
+        }
+      },
+      {
+        "supervisor": {
+          "port": 9001,
+          "protocol": "tcp",
+          "source": "172.16.0.0/24"
+        }
+      }
+    ]
+  },
+  "latest-postgres": {
+    "listen": {
+      "address": "127.0.0.1",
+      "port": 5432
+    },
+    "pg_hba": [
+      {
+        "type": "host",
+        "db": "all",
+        "user": "all",
+        "addr": "127.0.0.1/24",
+        "method": "md5"
+      }
+    ]
+  },
+  "ngx": {
+    "install": "mainline",
+    "with_openssl": false,
+    "with_http2": false,
+    "with_ipv6": false,
+    "with_ct": false,
+    "with_status": true
+  },
+  "volgactf-2018-final-cloud": {
+    "processes": 4
+  }
+}

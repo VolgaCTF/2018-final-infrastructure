@@ -1,0 +1,21 @@
+{
+  "environment": "production",
+  "run_list": [
+    "role[base]",
+    "recipe[latest-postgres::default]"
+  ],
+  "automatic": {
+    "fqdn": "postgres.final.server.volgactf.org"
+  },
+  "firewall": {
+    "rules": [
+      {
+        "postgres": {
+          "port": 5432,
+          "protocol": "tcp",
+          "source": "172.16.0.0/24"
+        }
+      }
+    ]
+  }
+}

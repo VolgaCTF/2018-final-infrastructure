@@ -1,0 +1,119 @@
+{
+  "environment": "production",
+  "run_list": [
+    "role[base]",
+    "recipe[latest-postgres::client]",
+    "recipe[ngx::default]",
+    "recipe[supervisor::default]",
+    "recipe[latest-nodejs::default]",
+    "recipe[yarn::default]",
+    "recipe[htpasswd::default]",
+    "recipe[themis-finals::default]",
+    "recipe[themis-finals::monitoring]"
+  ],
+  "automatic": {
+    "fqdn": "master.final.server.volgactf.org"
+  },
+  "firewall": {
+    "rules": [
+      {
+        "http": {
+          "port": 80,
+          "protocol": "tcp",
+          "source": "0.0.0.0/0"
+        }
+      },
+      {
+        "netdata_http": {
+          "port": 8000,
+          "protocol": "tcp",
+          "source": "10.73.73.0/24"
+        }
+      },
+      {
+        "supervisor": {
+          "port": 9001,
+          "protocol": "tcp",
+          "source": "172.16.0.0/24"
+        }
+      }
+    ]
+  },
+  "latest-postgres": {
+    "secret": {
+      "prefix_fqdn": true
+    }
+  },
+  "latest-redis": {
+    "secret": {
+      "prefix_fqdn": true
+    }
+  },
+  "ngx": {
+    "install": "mainline",
+    "with_openssl": false,
+    "with_http2": false,
+    "with_ipv6": false,
+    "with_ct": false,
+    "with_status": true,
+    "with_realip": true,
+    "with_njs": true
+  },
+  "secret": {
+    "prefix_fqdn": false
+  },
+  "supervisor": {
+    "inet_port": "0.0.0.0:9001"
+  },
+  "themis-finals": {
+    "fqdn": "final.2018.volgactf.ru",
+    "extra_fqdn": [
+      "live.volgactf.ru"
+    ],
+    "autostart": true,
+    "backend": {
+      "revision": "master",
+      "server": {
+        "processes": 4
+      },
+      "queue": {
+        "processes": 8
+      }
+    },
+    "frontend": {
+      "revision": "master"
+    },
+    "netdata_secret": {
+      "prefix_fqdn": true
+    },
+    "aws_secret": {
+      "prefix_fqdn": true
+    },
+    "postgres_secret": {
+      "prefix_fqdn": true
+    },
+    "redis_secret": {
+      "prefix_fqdn": true
+    },
+    "stream": {
+      "revision": "master"
+    },
+    "tasks": {
+      "cleanup_upload_dir": {
+        "enabled": true,
+        "cron": {
+          "minute": "*/15"
+        }
+      },
+      "backup": {
+        "enabled": true,
+        "cron": {
+          "minute": "*/30"
+        }
+      }
+    },
+    "monitoring": {
+      "fqdn": "netdata.final.2018.volgactf.ru"
+    }
+  }
+}
