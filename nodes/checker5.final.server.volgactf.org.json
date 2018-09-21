@@ -51,7 +51,7 @@
     "image": {
       "name": "hospital-checker",
       "registry": "docker.volgactf.org",
-      "repo": "hospital-checker",
+      "repo": "hospital-checker-second",
       "tag": "2"
     },
     "deployment": {
